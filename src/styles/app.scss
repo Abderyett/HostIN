@@ -1,9 +1,17 @@
 @import './abstracts/colors';
+@import './abstracts/radius';
+@import './abstracts/shadow';
+@import './navbar';
+@import './abstracts/fonts';
+
+
 
 * {
-  margin: 0;
-  padding: 0;
+  margin    : 0;
+  padding   : 0;
   box-sizing: border-box;
-  color: $blue_900;
-  
+  font-family: 'proxima_regular',
+    sans-serif;
+  ;
+
 }
