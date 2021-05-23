@@ -6,15 +6,27 @@
 .wrapper {
   max-width: 1080px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height: 6rem;
+}
+.logo {
+  text-align: start;
 }
 .nav-links {
   display: flex;
   gap: 0 4rem;
   cursor: pointer;
 }
+@supports not (gap: 0 4rem) {
+  .nav-links {
+    margin-left: 4rem;
+  }
+  .nav-links > * {
+    margin-left: 4rem;
+  }
+}
+
 .sign-in {
   background: rgba($white, 0.2);
   padding: 5px 10px;

@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <header className="nav-container">
       <div className="wrapper">
-        <div className="logo">HostIN</div>
+        <h1 className="logo">HostIN</h1>
         <ul className="nav-links">
           <li>Hosting</li>
           <li>Domain</li>
