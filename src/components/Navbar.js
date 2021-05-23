@@ -1,7 +1,11 @@
 import React from 'react';
 
 function Navbar() {
-  return <div className="nav-container">nav</div>;
+  return (
+    <nav className="nav-container">
+      <div className="logo">HostIN</div>
+    </nav>
+  );
 }
 
 export default Navbar;
