@@ -1,8 +1,12 @@
 import React from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../Svgs/logo.svg';
 
+import { useGlobalContext } from '../context';
+
 function Navbar() {
+  const { showNav, setShowNav } = useGlobalContext();
   return (
     <header className="nav-container">
       <div className="wrapper">
@@ -20,6 +24,9 @@ function Navbar() {
             Sign in <BsArrowRightShort className="arrow-icon" />
           </span>
         </a>
+        <button className="toggle-btn" type="button" onClick={() => setShowNav(!showNav)}>
+          {showNav ? <FaBars className="hamburger-menu" /> : <FaTimes className="times-menu" />}
+        </button>
       </div>
     </header>
   );
