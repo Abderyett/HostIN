@@ -11,31 +11,92 @@
   place-items: center;
   place-content: center;
   max-width: 1080px;
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
 }
 
 .data-center {
-  width: 550px;
+  width: 700px;
   @media (max-width: 1111px) {
     width: 500px;
   }
   @media (max-width: 900px) {
     width: 450px;
   }
+  @media (max-width: 768px) {
+    width: 400px;
+  }
 }
 
 .hero-text {
   color: $white;
-  text-align: center;
-
+  text-align: start;
+  padding: 2rem;
   h1 {
     font-size: 4.8rem;
     font-family: "proxima_bold";
+    padding-bottom: 1rem;
+    @media (max-width: 900px) {
+      font-size: 3.8rem;
+    }
+    @media (max-width: 768px) {
+      font-size: 3.4rem;
+    }
   }
   h4 {
     font-size: 2.4rem;
+    padding-bottom: 3rem;
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
+}
+
+@mixin btn {
+  padding: 1rem 2rem;
+  background: transparent;
+  color: $white;
+  margin-right: 2rem;
+  border-radius: $full;
+  border: none;
+  font-family: "proxima_bold";
+  margin-top: 4rem;
+  position: relative;
+}
+
+@mixin hover-btn {
+  svg {
+    transform: translateX(4px);
+    transition: all 0.3s ease-in-out;
+  }
+}
+@mixin arrow-position {
+  span {
+    position: absolute;
+    top: 12px;
+  }
+}
+
+.start-btn {
+  @include btn;
+  background: $yellow_500;
+  color: $black;
+  @include arrow-position;
+  &:hover {
+    background: rgba($yellow_400, 0.8);
+    cursor: pointer;
+    @include hover-btn;
+  }
+}
+
+.contact-btn {
+  @include btn;
+  &:hover {
+    color: rgba($white, 0.9);
+    cursor: pointer;
+    @include hover-btn;
+  }
+  @include arrow-position;
 }
