@@ -10,9 +10,7 @@
   align-items: center;
   height: 6rem;
 }
-.logo {
-  text-align: start;
-}
+
 .nav-links {
   display: flex;
   cursor: pointer;
@@ -53,4 +51,12 @@
   position: relative;
   top: 1px;
   font-size: 1.9rem;
+}
+.logo {
+  text-align: start;
+  display: flex;
+}
+.logo-image {
+  width: 25px;
+  margin-right: 1rem;
 }
