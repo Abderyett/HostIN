@@ -79,7 +79,10 @@
 
 .hamburger-menu {
   @include icons-size;
+  @media (min-width: 900px) {
+    display: none;
+  }
 }
-.times-menu {
-  @include icons-size;
-}
+// .times-menu {
+//   @include icons-size;
+// }

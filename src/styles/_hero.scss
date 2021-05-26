@@ -1,6 +1,6 @@
 .hero-container {
   background-image: linear-gradient(146deg, rgba(218, 185, 252, 1) 11.2%, rgba(125, 89, 252, 1) 91.1%);
-  height: 80vh;
+  height: 80%;
   position: relative;
 }
 .hero-section {
@@ -12,8 +12,8 @@
   place-content: center;
   max-width: 1080px;
   @media (max-width: 900px) {
-    grid-template-columns: 450px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
   }
 }
 

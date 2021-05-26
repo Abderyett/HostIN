@@ -6,7 +6,7 @@ import logo from '../Svgs/logo.svg';
 import { useGlobalContext } from '../context';
 
 function Navbar() {
-  const { showNav, setShowNav } = useGlobalContext();
+  const { setShowNav } = useGlobalContext();
   return (
     <header className="nav-container">
       <div className="wrapper">
@@ -24,8 +24,8 @@ function Navbar() {
             Sign in <BsArrowRightShort className="arrow-icon" />
           </span>
         </a>
-        <button className="toggle-btn" type="button" onClick={() => setShowNav(!showNav)}>
-          {showNav ? <FaTimes className="times-menu" /> : <FaBars className="hamburger-menu" />}
+        <button className="toggle-btn" type="button" onClick={() => setShowNav(true)}>
+          <FaBars className="hamburger-menu" />
         </button>
       </div>
     </header>
