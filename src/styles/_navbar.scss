@@ -54,7 +54,8 @@
 }
 .logo {
   text-align: start;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   margin-left: 3rem;
   padding-right: 6rem;
 }

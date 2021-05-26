@@ -25,7 +25,7 @@ function Navbar() {
           </span>
         </a>
         <button className="toggle-btn" type="button" onClick={() => setShowNav(!showNav)}>
-          {showNav ? <FaBars className="hamburger-menu" /> : <FaTimes className="times-menu" />}
+          {showNav ? <FaTimes className="times-menu" /> : <FaBars className="hamburger-menu" />}
         </button>
       </div>
     </header>

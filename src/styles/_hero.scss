@@ -35,6 +35,9 @@
   text-align: start;
   padding: 2rem;
   margin-top: 10rem;
+  @media (max-width: 900px) {
+    margin-top: 6rem;
+  }
   h1 {
     font-size: 4.8rem;
     font-family: "proxima_bold";
