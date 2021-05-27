@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BsX } from 'react-icons/bs';
+import { v4 as uuidv4 } from 'uuid';
 import { useGlobalContext } from '../context';
+import data from '../data';
 
 function Sidebar() {
   const { showNav, setShowNav } = useGlobalContext();
@@ -12,6 +14,23 @@ function Sidebar() {
           <button type="button" className="close-btn" onClick={() => setShowNav(false)}>
             <BsX />
           </button>
+          <div className="menu-body">
+            <section className="nav-list">
+              {data.map((el) => (
+                <article className="links-container" key={el.id}>
+                  <h1> {el.page}</h1>
+                  <div className="links-container">
+                    {el.links.map((link) => (
+                      <a href={link.url}>
+                        <span>{link.icon}</span>
+                        <span>{link.label}</span>
+                      </a>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </section>
+          </div>
         </aside>
       </div>
     </aside>,
