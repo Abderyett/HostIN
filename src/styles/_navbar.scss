@@ -66,23 +66,36 @@
 
 @mixin icons-size {
   margin-right: 3rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
 .toggle-btn {
-  height: 100%;
-  background: transparent;
+  background: rgba($white, 0.3);
+
   border-color: transparent;
   color: white;
-}
-
-.hamburger-menu {
-  @include icons-size;
+  width: 4.5rem;
+  height: 3rem;
+  border-radius: $full;
+  position: relative;
+  margin-right: 2rem;
+  cursor: pointer;
+  &:hover {
+    background: rgba($white, 0.6);
+  }
   @media (min-width: 900px) {
     display: none;
   }
 }
-// .times-menu {
-//   @include icons-size;
-// }
+
+.hamburger-menu {
+  @include icons-size;
+  position: absolute;
+  top: 3px;
+  right: -20px;
+
+  @media (min-width: 900px) {
+    display: none;
+  }
+}

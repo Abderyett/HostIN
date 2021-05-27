@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { FaTimes } from 'react-icons/fa';
+import { BsX } from 'react-icons/bs';
 import { useGlobalContext } from '../context';
 
 function Sidebar() {
@@ -10,7 +10,7 @@ function Sidebar() {
       <div className={showNav ? 'sidebar-warpper show' : 'sidebar-warpper'}>
         <aside className="modal-container">
           <button type="button" className="close-btn" onClick={() => setShowNav(false)}>
-            <FaTimes />
+            <BsX />
           </button>
         </aside>
       </div>

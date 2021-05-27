@@ -101,7 +101,7 @@
 .contact-btn {
   @include btn;
   &:hover {
-    color: rgba($white, 0.9);
+    color: rgba($white, 0.8);
     cursor: pointer;
     @include hover-btn;
   }

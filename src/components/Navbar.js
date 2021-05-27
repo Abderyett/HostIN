@@ -15,9 +15,9 @@ function Navbar() {
         </h2>
         <ul className="nav-links">
           <li>Hosting</li>
-          <li>Domain</li>
           <li>Solution</li>
-          <li>Support</li>
+          <li>Domain</li>
+          <li>Company</li>
         </ul>
         <a href="/" className="sign-in">
           <span>
