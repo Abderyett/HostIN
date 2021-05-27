@@ -19,11 +19,11 @@ function Sidebar() {
               {data.map((el) => (
                 <article className="links-container" key={el.id}>
                   <h1> {el.page}</h1>
-                  <div className="links-container">
+                  <div className="links">
                     {el.links.map((link) => (
-                      <a href={link.url}>
-                        <span>{link.icon}</span>
-                        <span>{link.label}</span>
+                      <a href={link.url} key={uuidv4()} className="link">
+                        <span className="icon">{link.icon}</span>
+                        <span className="label">{link.label}</span>
                       </a>
                     ))}
                   </div>
