@@ -6,7 +6,18 @@ const AppContext = React.createContext();
 function AppProvider({ children }) {
   const [showNav, setShowNav] = useState(false);
   const [submenu, setSubmenu] = useState(false);
-  return <AppContext.Provider value={{ showNav, setShowNav, submenu, setSubmenu }}>{children}</AppContext.Provider>;
+  const [location, setLocation] = useState({});
+
+  const showSubMenu = (text, coordinate) => {
+    setLocation(coordinate);
+    setSubmenu(true);
+  };
+  console.log(location);
+  return (
+    <AppContext.Provider value={{ showNav, setShowNav, submenu, setSubmenu, showSubMenu, location }}>
+      {children}
+    </AppContext.Provider>
+  );
 }
 
 export default AppProvider;
