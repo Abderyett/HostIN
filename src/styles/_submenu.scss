@@ -1,0 +1,26 @@
+.submenu {
+  background: $white;
+  box-shadow: $shadow;
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  // display: none;
+  padding: 2rem;
+  border-radius: $lg;
+}
+.submenu::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $white;
+
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}

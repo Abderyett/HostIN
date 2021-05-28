@@ -5,7 +5,8 @@ const AppContext = React.createContext();
 
 function AppProvider({ children }) {
   const [showNav, setShowNav] = useState(false);
-  return <AppContext.Provider value={{ showNav, setShowNav }}>{children}</AppContext.Provider>;
+  const [submenu, setSubmenu] = useState(false);
+  return <AppContext.Provider value={{ showNav, setShowNav, submenu, setSubmenu }}>{children}</AppContext.Provider>;
 }
 
 export default AppProvider;

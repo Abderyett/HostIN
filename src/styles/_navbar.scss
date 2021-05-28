@@ -17,6 +17,9 @@
 
   li {
     margin-right: 4rem;
+    &:hover {
+      color: rgba($white, 0.8);
+    }
   }
   @media (max-width: 900px) {
     display: none;

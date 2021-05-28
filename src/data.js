@@ -1,4 +1,4 @@
-import { FaCreditCard, FaBook, FaBriefcase } from 'react-icons/fa';
+import { FaBook, FaBriefcase } from 'react-icons/fa';
 import { FcEnteringHeavenAlive, FcCollect, FcFlowChart, FcMindMap, FcWorkflow } from 'react-icons/fc';
 
 const sublinks = [

@@ -9,6 +9,8 @@ function Navbar() {
   const { setShowNav } = useGlobalContext();
   return (
     <header className="nav-container">
+      <nav className="nav" />
+
       <div className="wrapper">
         <h2 className="logo">
           <img className="logo-image" src={logo} alt="logo" /> Host-IN
