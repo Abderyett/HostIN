@@ -1,14 +1,24 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
+import React, { useRef } from 'react';
 import { BsChevronRight } from 'react-icons/bs';
 import Navbar from './Navbar';
 import dataCenter from '../Svgs/data-center.svg';
+import { useGlobalContext } from '../context';
 
 function Hero() {
+  const { setSubmenu } = useGlobalContext();
+  const ref = useRef(null);
+  const hideSubMenu = (event) => {
+    console.log(event.target);
+    if (!ref.current.contains(event.traget)) {
+      setSubmenu(false);
+    }
+  };
   return (
     <>
       <main className="hero-container">
         <Navbar />
-        <div className="hero-section">
+        <div className="hero-section" ref={ref} onMouseOver={hideSubMenu}>
           <div className="hero-text">
             <h1>Cloud Hosting For Pros</h1>
             <h4>Deplay your website with fews clicks</h4>

@@ -4,13 +4,16 @@
   position: absolute;
   opacity: 0;
   padding: 20px;
-  top: -10px;
+  top: -20px;
   transform: translateX(-50%);
   z-index: 3;
   display: none;
   border-radius: $lg;
   transition: all 0.3s, opacity 0.1s, transform 0.2s;
   will-change: opacity;
+  @media (max-width: 900px) {
+    visibility: hidden;
+  }
 }
 .submenu::before {
   content: "";
@@ -24,6 +27,9 @@
   top: -8px;
   left: 50%;
   transform: translateX(-50%);
+  @media (max-width: 900px) {
+    visibility: hidden;
+  }
 }
 
 .links-menu {
@@ -46,24 +52,24 @@
   margin: 0;
 }
 
-.link {
+.link-submenu {
   text-decoration: none;
   font-size: 1.25rem;
 }
 
-.icon {
+.icon-submenu {
   color: $blue_grey_400;
   margin-right: 1rem;
   font-size: 1.5rem;
 }
 
-.label {
+.label-submenu {
   color: $grey_600;
   position: relative;
   font-size: 1.4rem;
   font-weight: 500;
 }
-.link:hover .icon {
+.link-submenu:hover .icon-submenu {
   color: $blue_grey_600;
 }
 .link-arrow {
@@ -73,7 +79,7 @@
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-.link:hover .link-arrow {
+.link-submenu:hover .link-arrow {
   opacity: 1;
   transform: translateX(3px);
 }

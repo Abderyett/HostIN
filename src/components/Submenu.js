@@ -11,16 +11,16 @@ function Submenu() {
     menu.style.left = `${center}px`;
     menu.style.top = `${bottom}px`;
   }, [location]);
-  console.log('submenudata', subMenuPage);
+
   return (
     <aside ref={container} className={`${submenu ? 'submenu show' : 'submenu'}`}>
       <h4> {subMenuPage.page}</h4>
       <article className="links-menu">
         {subMenuPage.links.map((el) => (
           <div className="menu-items">
-            <a href={el.url} className="link">
-              <span className="icon">{el.icon}</span>
-              <span className="label">
+            <a href={el.url} className="link-submenu">
+              <span className="icon-submenu">{el.icon}</span>
+              <span className="label-submenu">
                 {el.label}&nbsp;
                 <span className="hooverArrow">
                   <BsArrowRightShort className="link-arrow" />
