@@ -15,7 +15,7 @@ const sublinks = [
   },
   {
     id: 2,
-    page: 'Solutions',
+    page: 'Solution',
     links: [
       { label: 'Website bundle', icon: <FaBook />, url: '/products' },
       { label: 'Custom web design', icon: <FaBook />, url: '/products' },
@@ -23,6 +23,7 @@ const sublinks = [
       { label: 'Billing', icon: <FaBook />, url: '/products' },
     ],
   },
+
   {
     id: 3,
     page: 'Company',

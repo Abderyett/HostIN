@@ -1,9 +1,8 @@
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import React from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import logo from '../Svgs/logo.svg';
-
 import { useGlobalContext } from '../context';
 
 function Navbar() {
@@ -13,10 +12,11 @@ function Navbar() {
     const text = e.target.textContent;
     const btnCoordinate = e.target.getBoundingClientRect();
     const center = (btnCoordinate.right + btnCoordinate.left) / 2;
-    const { bottom } = btnCoordinate - 3;
+    const bottom = btnCoordinate.bottom + 15;
 
     showSubMenu(text, { center, bottom });
   };
+
   return (
     <header className="nav-container">
       <nav className="nav" />
@@ -26,18 +26,10 @@ function Navbar() {
           <img className="logo-image" src={logo} alt="logo" /> Host-IN
         </h2>
         <ul className="nav-links">
-          <li onMouseOver={displaySubMenu} onFocus={displaySubMenu}>
-            Hosting
-          </li>
-          <li onMouseOver={displaySubMenu} onFocus={displaySubMenu}>
-            Solution
-          </li>
-          <li onMouseOver={displaySubMenu} onFocus={displaySubMenu}>
-            Domain
-          </li>
-          <li onMouseOver={displaySubMenu} onFocus={displaySubMenu}>
-            Company
-          </li>
+          <li onMouseOver={displaySubMenu}>Hosting</li>
+          <li onMouseOver={displaySubMenu}>Solution</li>
+          <li onMouseOver={displaySubMenu}>Company</li>
+          <li>Domain</li>
         </ul>
         <a href="/" className="sign-in">
           <span>
