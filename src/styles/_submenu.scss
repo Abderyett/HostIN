@@ -28,8 +28,9 @@
 
 .links-menu {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr 1fr;
   justify-items: start;
+  grid-gap: 1rem;
 }
 .submenu.show {
   display: block;
@@ -37,19 +38,14 @@
   h4 {
     text-align: start;
     color: $grey_500;
+    margin-bottom: 1.5rem;
   }
 }
 
-.links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 19rem);
-  grid-auto-rows: 4rem;
-  grid-auto-flow: row;
-  justify-items: start;
-  align-items: center;
-  align-content: center;
-  // border-bottom: 1px dashed $grey_300;
+.menu-items {
+  margin: 0;
 }
+
 .link {
   text-decoration: none;
   font-size: 1.25rem;

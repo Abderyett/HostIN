@@ -15,9 +15,9 @@ function Submenu() {
   return (
     <aside ref={container} className={`${submenu ? 'submenu show' : 'submenu'}`}>
       <h4> {subMenuPage.page}</h4>
-      {subMenuPage.links.map((el) => (
-        <article className="links-menu" key={el.id}>
-          <div className="links">
+      <article className="links-menu">
+        {subMenuPage.links.map((el) => (
+          <div className="menu-items">
             <a href={el.url} className="link">
               <span className="icon">{el.icon}</span>
               <span className="label">
@@ -28,8 +28,8 @@ function Submenu() {
               </span>
             </a>
           </div>
-        </article>
-      ))}
+        ))}
+      </article>
     </aside>
   );
 }
