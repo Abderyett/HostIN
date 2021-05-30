@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import { useGlobalContext } from '../context';
 
-function Submenu() {
+export function Submenu() {
   const { submenu, location, subMenuPage } = useGlobalContext();
   const container = useRef(null);
   useEffect(() => {
@@ -33,5 +33,3 @@ function Submenu() {
     </aside>
   );
 }
-
-export default Submenu;

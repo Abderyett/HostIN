@@ -1,9 +1,7 @@
 import React from 'react';
-import Sidebar from './components/Sidebar';
-import Hero from './components/Hero';
 import './styles/app.scss';
 import { AppProvider } from './context';
-import Submenu from './components/Submenu';
+import { Submenu, Sidebar, Hero, Partners } from './components';
 
 function App() {
   return (
@@ -11,6 +9,7 @@ function App() {
       <Sidebar />
       <Hero />
       <Submenu />
+      <Partners />
     </AppProvider>
   );
 }

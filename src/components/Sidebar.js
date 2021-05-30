@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useGlobalContext } from '../context';
 import data from '../data';
 
-function Sidebar() {
+export function Sidebar() {
   const { showNav, setShowNav } = useGlobalContext();
   return ReactDOM.createPortal(
     <aside className="Sidebar">

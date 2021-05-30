@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import React, { useRef } from 'react';
 import { BsChevronRight } from 'react-icons/bs';
-import Navbar from './Navbar';
+import { Navbar } from './Navbar';
 import dataCenter from '../Svgs/data-center.svg';
 import { useGlobalContext } from '../context';
 
-function Hero() {
+export function Hero() {
   const { setSubmenu } = useGlobalContext();
   const ref = useRef(null);
   const hideSubMenu = (event) => {
@@ -45,5 +45,3 @@ function Hero() {
     </>
   );
 }
-
-export default Hero;

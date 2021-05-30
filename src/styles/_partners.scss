@@ -1,0 +1,6 @@
+.partners-container {
+  height: 20vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-auto-rows: 100px;
+}
