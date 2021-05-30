@@ -18,7 +18,6 @@ export function Navbar() {
     showSubMenu(text, { center, bottom });
   };
   const hideSubMenu = (event) => {
-    console.log(event.target);
     if (!ref.current.contains(event.traget)) {
       setSubmenu(false);
     }

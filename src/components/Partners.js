@@ -9,12 +9,12 @@ import telia from '../Svgs/telia.svg';
 export function Partners() {
   return (
     <div className="partners-container">
-      <img scr={gtt} alt="gtt" />
-      <img scr={bt} alt="bt" />
-      <img scr={equinix} alt="equinix" />
-      <img scr={interxion} alt="interxion" />
-      <img scr={level3} alt="level3" />
-      <img scr={telia} alt="telia" />
+      <img src={gtt} alt="gtt" />
+      <img src={bt} alt="bt" />
+      <img src={equinix} alt="equinix" />
+      <img src={interxion} alt="interxion" />
+      <img src={level3} alt="level3" />
+      <img src={telia} alt="telia" />
     </div>
   );
 }

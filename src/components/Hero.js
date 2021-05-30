@@ -9,7 +9,6 @@ export function Hero() {
   const { setSubmenu } = useGlobalContext();
   const ref = useRef(null);
   const hideSubMenu = (event) => {
-    console.log(event.target);
     if (!ref.current.contains(event.traget)) {
       setSubmenu(false);
     }
