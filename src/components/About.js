@@ -9,18 +9,26 @@ import support from '../Svgs/support.svg';
 export function About() {
   return (
     <section className="about-container">
+      <h1 className="about-heading">
+        <hr />
+        Why Choose us?
+      </h1>
+
       <div className="security-container">
         <img src={security} alt="security-logo" className="security-img" />
         <div className="text">
           <div className="shield">
             <BiCheckShield />
           </div>
-          <h1>Quick response and secure server</h1>
+          <h1>Redundancy and secure servers</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iste.</p>
           <span className="check-icon">
             <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
           </span>
 
+          <span className="check-icon">
+            <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
+          </span>
           <span className="check-icon">
             <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
           </span>
@@ -37,6 +45,9 @@ export function About() {
             <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
           </span>
 
+          <span className="check-icon">
+            <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
+          </span>
           <span className="check-icon">
             <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
           </span>

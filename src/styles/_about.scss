@@ -1,5 +1,26 @@
 .about-container {
-  max-width: 1080px;
+  margin-top: 20rem;
+  margin: 0;
+  width: 100vw;
+}
+.about-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 10rem;
+  background: rgb(48, 207, 208);
+  background: linear-gradient(180deg, rgba(48, 207, 208, 1) 0%, rgba(51, 8, 103, 1) 78%);
+  background-clip: text;
+  --moz-background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  hr {
+    width: 5rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    color: $blue_400;
+    border-top: 1px solid $blue_400;
+  }
 }
 
 @mixin grid-container {
@@ -7,19 +28,26 @@
   grid-gap: 2rem;
   grid-template-columns: repeat(2, 50%);
   grid-auto-rows: 30rem;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
   padding: 2rem;
   width: 100%;
+  margin-bottom: 10rem;
+  max-width: 1080px;
+
   @media (max-width: 900px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10rem;
   }
 
   img {
-    width: 250px;
+    width: 350px;
+    @media (max-width: 900px) {
+      width: 250px;
+    }
   }
 }
 .security-container {
@@ -36,6 +64,7 @@
   border-radius: $full;
   display: grid;
   place-items: center;
+  margin-left: 0;
 }
 
 .shield {
@@ -46,11 +75,21 @@
 
 .rocket {
   @include about-icon;
-  background: $yellow_100;
+  background: $yellow_vivid_100;
   color: $yellow_vivid_400;
 }
 .text {
-  color: $grey_600;
+  padding: 3rem;
+  border: 1px solid $grey_300;
+  box-shadow: $shadow;
+  border-radius: $xl;
+  &:hover {
+    border: 1px solid $grey_500;
+    box-shadow: $shadow-lg;
+    scale: (1.01);
+    transition: all 0.3s ease-in-out;
+  }
+
   h1 {
     padding-bottom: 2rem;
     padding-top: 2rem;
@@ -65,10 +104,11 @@
   padding-top: 2rem;
   display: block;
   text-align: start;
-  display: flex;
+
   svg {
     color: $green_600;
     font-size: 2rem;
+    vertical-align: bottom;
   }
 }
 
