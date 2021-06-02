@@ -1,13 +1,25 @@
+.about-container {
+  max-width: 1080px;
+}
+
 @mixin grid-container {
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(2, 50%);
+  grid-auto-rows: 30rem;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  width: 100%;
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   img {
-    width: 300px;
+    width: 250px;
   }
 }
 .security-container {
@@ -16,4 +28,52 @@
 
 .support-container {
   @include grid-container;
+}
+@mixin about-icon {
+  font-size: 3.5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: $full;
+  display: grid;
+  place-items: center;
+}
+
+.shield {
+  @include about-icon;
+  background: $green_100;
+  color: $green_400;
+}
+
+.rocket {
+  @include about-icon;
+  background: $yellow_100;
+  color: $yellow_vivid_400;
+}
+.text {
+  color: $grey_600;
+  h1 {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    text-align: start;
+  }
+  p {
+    text-align: start;
+  }
+}
+
+.check-icon {
+  padding-top: 2rem;
+  display: block;
+  text-align: start;
+  display: flex;
+  svg {
+    color: $green_600;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .support-img {
+    order: -1;
+  }
 }

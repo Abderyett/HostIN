@@ -1,4 +1,8 @@
 import React from 'react';
+import { BiCheckShield } from 'react-icons/bi';
+import { IoRocketOutline } from 'react-icons/io5';
+import { IoIosCheckmarkCircle } from 'react-icons/io';
+
 import security from '../Svgs/security.svg';
 import support from '../Svgs/support.svg';
 
@@ -6,20 +10,38 @@ export function About() {
   return (
     <section className="about-container">
       <div className="security-container">
-        <img src={security} alt="security-logo" />
-        <div className="security-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laborum possimus esse facere quo fugiat
-          explicabo, voluptatem qui. Officiis consequuntur esse ullam porro obcaecati beatae consequatur quo sunt maxime
-          magni.
+        <img src={security} alt="security-logo" className="security-img" />
+        <div className="text">
+          <div className="shield">
+            <BiCheckShield />
+          </div>
+          <h1>Quick response and secure server</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iste.</p>
+          <span className="check-icon">
+            <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
+          </span>
+
+          <span className="check-icon">
+            <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
+          </span>
         </div>
       </div>
       <div className="support-container">
-        <img src={support} alt="support-logo" />
-        <div className="security-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laborum possimus esse facere quo fugiat
-          explicabo, voluptatem qui. Officiis consequuntur esse ullam porro obcaecati beatae consequatur quo sunt maxime
-          magni.
+        <div className="text">
+          <div className="rocket">
+            <IoRocketOutline />
+          </div>
+          <h1>Dedicated support</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iste.</p>
+          <span className="check-icon">
+            <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
+          </span>
+
+          <span className="check-icon">
+            <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
+          </span>
         </div>
+        <img src={support} alt="support-logo" className="support-img" />
       </div>
     </section>
   );
