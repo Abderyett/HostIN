@@ -4,3 +4,4 @@ export * from './Partners';
 export * from './Sidebar';
 export * from './Submenu';
 export * from './About';
+export * from './Stats';

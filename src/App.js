@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/app.scss';
 import { AppProvider } from './context';
-import { Submenu, Sidebar, Hero, Partners, About } from './components';
+import { Submenu, Sidebar, Hero, Partners, About, Stats } from './components';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Submenu />
       <Partners />
       <About />
+      <Stats />
     </AppProvider>
   );
 }

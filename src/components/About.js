@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiCheckShield } from 'react-icons/bi';
 import { IoRocketOutline } from 'react-icons/io5';
-import { IoIosCheckmarkCircle } from 'react-icons/io';
+import { IoIosCheckmarkCircle, IoIosChatboxes } from 'react-icons/io';
 
 import security from '../Svgs/security.svg';
 import support from '../Svgs/support.svg';
@@ -37,7 +37,7 @@ export function About() {
       <div className="support-container">
         <div className="text">
           <div className="rocket">
-            <IoRocketOutline />
+            <IoIosChatboxes />
           </div>
           <h1>Dedicated support</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iste.</p>

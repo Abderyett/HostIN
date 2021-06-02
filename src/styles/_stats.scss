@@ -1,0 +1,23 @@
+.stats-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $light_blue_vivid_600;
+  width: 90%;
+  height: 9rem;
+  border-radius: $md;
+  color: $white;
+
+  font-weight: 900;
+
+  span {
+    display: flex;
+    font-size: 3rem;
+
+    svg {
+      vertical-align: top;
+    }
+  }
+}
