@@ -6,26 +6,32 @@ import { GiServerRack } from 'react-icons/gi';
 export function Stats() {
   return (
     <section className="stats-container">
-      <div>
+      <div className="stats-wrapper">
         <span>
-          <AiOutlineHistory />
-          &nbsp;99%
+          <AiOutlineHistory className="stats-icon" />
         </span>
-        Uptime
+        <div className="stats-text">
+          <h3>99%</h3>
+          <p>Uptime</p>
+        </div>
       </div>
-      <div>
+      <div className="stats-wrapper">
         <span>
-          <IoCloudDone />
-          &nbsp;+256K
+          <IoCloudDone className="stats-icon" />
         </span>
-        Customers
+        <div className="stats-text">
+          <h3>+256K</h3>
+          <p>Customers</p>
+        </div>
       </div>
-      <div>
+      <div className="stats-wrapper">
         <span>
-          <GiServerRack />
-          +30
+          <GiServerRack className="stats-icon" />
         </span>
-        Pops location
+        <div className="stats-text">
+          <h3>+30 </h3>
+          <p>Pops location</p>
+        </div>
       </div>
     </section>
   );
