@@ -1,10 +1,11 @@
 import React from 'react';
 import maps from '../Svgs/maps.svg';
+import Map from '../Svgs/map';
 
 export function Maps() {
   return (
-    <section className="map-container">
-      <img src={maps} alt="global-map" />
+    <section>
+      <Map className="map" />
     </section>
   );
 }
