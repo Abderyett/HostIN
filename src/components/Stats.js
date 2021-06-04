@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiOutlineHistory } from 'react-icons/ai';
 import { IoCloudDone } from 'react-icons/io5';
 import { GiServerRack } from 'react-icons/gi';
+import { useInView } from 'react-intersection-observer';
 
 export function Stats() {
+  const { ref, inView } = useInView({ threshhold: 0.3 });
+
   const [uptime, setUptime] = useState(0);
   const [customers, setCustomers] = useState(0);
   const [locationNumber, setLocationNumber] = useState(0);
@@ -18,13 +21,16 @@ export function Stats() {
       });
     }, interval);
   }
-
+  useEffect(() => {
+    if (inView) {
+      timer(99, 30, setUptime);
+      timer(256, 10, setCustomers);
+      timer(30, 95, setLocationNumber);
+    }
+  }, [inView]);
   return (
     <section className="stats-container">
-      <button type="button" onClick={() => timer(99, 15, setUptime)}>
-        clcik
-      </button>
-      <div className="stats-wrapper">
+      <div className="stats-wrapper" ref={ref}>
         <span>
           <AiOutlineHistory className="stats-icon" />
         </span>
@@ -33,9 +39,7 @@ export function Stats() {
           <p>Uptime</p>
         </div>
       </div>
-      <button type="button" onClick={() => timer(256, 10, setCustomers)}>
-        clcik
-      </button>
+
       <div className="stats-wrapper">
         <span>
           <IoCloudDone className="stats-icon" />
@@ -45,9 +49,7 @@ export function Stats() {
           <p>Customers</p>
         </div>
       </div>
-      <button type="button" onClick={() => timer(30, 50, setLocationNumber)}>
-        clcik
-      </button>
+
       <div className="stats-wrapper">
         <span>
           <GiServerRack className="stats-icon" />
