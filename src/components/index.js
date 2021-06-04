@@ -5,3 +5,4 @@ export * from './Sidebar';
 export * from './Submenu';
 export * from './About';
 export * from './Stats';
+export * from './Maps';
