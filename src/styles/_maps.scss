@@ -5,23 +5,30 @@
   margin-top: 10rem;
 }
 
-#pin {
+.pin {
   cursor: pointer;
 }
 .map {
   position: relative;
 }
-
 .city-name {
+  display: none;
+}
+
+.city-name-show {
   position: absolute;
+  display: block;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0.5rem 1rem;
-  top: 220px;
-  left: 470px;
+  top: 0;
+  left: 0;
   overflow: hidden;
-  background: red;
+  background: $red_vivid_400;
   border-radius: $md;
   box-shadow: $shadow-lg;
   transform: all 3s ease-in-out;
+  @media (max-width: 900px) {
+    display: none;
+  }
 }

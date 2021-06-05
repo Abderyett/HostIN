@@ -3,9 +3,8 @@ import Map from '../Svgs/map';
 import { useGlobalContext } from '../context';
 
 export function Maps() {
-  const { setPosition, position, cityName } = useGlobalContext();
+  const { position, cityName, showcity } = useGlobalContext();
   const container = useRef(null);
-  console.log(position);
 
   useEffect(() => {
     const menu = container.current;
@@ -15,7 +14,7 @@ export function Maps() {
   }, [position]);
   return (
     <section className="map">
-      <div ref={container} className="city-name">
+      <div ref={container} className={showcity ? 'city-name-show' : 'city-name'}>
         {cityName}
       </div>
       <Map className="map" />
