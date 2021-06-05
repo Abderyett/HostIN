@@ -4,3 +4,24 @@
   max-width: 1080px;
   margin-top: 10rem;
 }
+
+#pin {
+  cursor: pointer;
+}
+.map {
+  position: relative;
+}
+
+.city-name {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  top: 220px;
+  left: 470px;
+  overflow: hidden;
+  background: red;
+  border-radius: $md;
+  box-shadow: $shadow-lg;
+  transform: all 3s ease-in-out;
+}

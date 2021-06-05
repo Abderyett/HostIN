@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import data from './data';
 
@@ -8,6 +8,9 @@ function AppProvider({ children }) {
   const [showNav, setShowNav] = useState(false);
   const [submenu, setSubmenu] = useState(false);
   const [location, setLocation] = useState({});
+  const [position, setPosition] = useState({});
+  const [cityName, setCityName] = useState('');
+
   const [subMenuPage, setsubMenuPage] = useState({ page: '', links: [] });
 
   const showSubMenu = (text, coordinate) => {
@@ -18,7 +21,21 @@ function AppProvider({ children }) {
   };
 
   return (
-    <AppContext.Provider value={{ showNav, setShowNav, submenu, setSubmenu, showSubMenu, location, subMenuPage }}>
+    <AppContext.Provider
+      value={{
+        showNav,
+        setShowNav,
+        submenu,
+        setSubmenu,
+        showSubMenu,
+        location,
+        subMenuPage,
+        position,
+        setPosition,
+        cityName,
+        setCityName,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );
