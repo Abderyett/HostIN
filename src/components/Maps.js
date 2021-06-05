@@ -8,9 +8,9 @@ export function Maps() {
 
   useEffect(() => {
     const menu = container.current;
-    const { center, bottom } = position;
+    const { center, top } = position;
     menu.style.left = `${center}px`;
-    menu.style.top = `${bottom}px`;
+    menu.style.top = `${top}px`;
   }, [position]);
   return (
     <section className="map">
