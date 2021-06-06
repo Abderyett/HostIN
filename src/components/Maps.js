@@ -3,8 +3,14 @@ import Map from '../Svgs/map';
 import { useGlobalContext } from '../context';
 
 export function Maps() {
-  const { position, cityName, showcity } = useGlobalContext();
+  const { position, cityName, showcity, setShowcity } = useGlobalContext();
   const container = useRef(null);
+  const ref = useRef(null);
+  const hideSubMenu = (event) => {
+    if (!ref.current.contains(event.traget)) {
+      setShowcity(false);
+    }
+  };
 
   useEffect(() => {
     const menu = container.current;
@@ -13,7 +19,7 @@ export function Maps() {
     menu.style.top = `${top}px`;
   }, [position]);
   return (
-    <section className="map">
+    <section ref={ref} onMouseLeave={hideSubMenu} className="map">
       <div ref={container} className={showcity ? 'city-name-show' : 'city-name'}>
         {cityName}
       </div>

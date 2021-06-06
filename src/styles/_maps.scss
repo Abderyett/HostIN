@@ -29,7 +29,4 @@
   border-radius: $md;
   box-shadow: $shadow-lg;
   transform: all 3s ease-in-out;
-  @media (max-width: 900px) {
-    display: none;
-  }
 }
