@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 import Map from '../Svgs/map';
 import { useGlobalContext } from '../context';
 
@@ -21,15 +20,9 @@ export function Maps() {
   }, [position]);
   return (
     <section ref={ref} onMouseLeave={hideSubMenu} className="map">
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2 }}
-        ref={container}
-        className={showcity ? 'city-name-show' : 'city-name'}
-      >
+      <div ref={container} className={showcity ? 'city-name-show' : 'city-name'}>
         {cityName}
-      </motion.div>
+      </div>
       <Map className="map" />
     </section>
   );

@@ -6,3 +6,4 @@ export * from './Submenu';
 export * from './About';
 export * from './Stats';
 export * from './Maps';
+export * from './Pricing';

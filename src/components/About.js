@@ -1,6 +1,5 @@
 import React from 'react';
 import { BiCheckShield } from 'react-icons/bi';
-import { IoRocketOutline } from 'react-icons/io5';
 import { IoIosCheckmarkCircle, IoIosChatboxes } from 'react-icons/io';
 
 import security from '../Svgs/security.svg';
