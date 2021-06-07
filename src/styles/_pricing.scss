@@ -29,7 +29,7 @@
   border-radius: $md;
   box-shadow: $shadow-md;
   color: $blue_800;
-  border: 2px solid $cyan_500;
+
   display: block;
   height: 100%;
   width: 100%;
@@ -54,6 +54,7 @@
   grid-row-start: 1;
   grid-row-end: 4;
   box-shadow: $shadow-xl;
+  border: 2.5px solid $cyan_500;
 }
 
 .card1,
@@ -112,6 +113,9 @@
   padding: 0.75rem;
   @include btn;
 }
+.price-btn.popular {
+  background: $cyan_400;
+}
 
 .select-btn {
   width: 85%;
@@ -123,6 +127,12 @@
   cursor: pointer;
   &:hover {
     background: $indigo_500;
+  }
+}
+.select-btn.popular {
+  background: $cyan_400;
+  &:hover {
+    background: $cyan_500;
   }
 }
 
@@ -140,9 +150,16 @@
 .bold-text {
   font-family: "proxima_bold";
 }
+.feature-text.popular {
+  color: $cyan_400;
+}
 
 .check {
   color: $green_600;
   font-size: 1.4rem;
   vertical-align: center;
+}
+
+.feature-list.popular {
+  padding: 2rem 5rem;
 }

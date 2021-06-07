@@ -77,7 +77,7 @@ export function Pricing() {
           <div className="price">
             <div className="price-save">
               <span>$9.49</span>
-              <button type="button" className="price-btn">
+              <button type="button" className="price-btn popular">
                 SAVE 85%
               </button>
             </div>
@@ -85,15 +85,15 @@ export function Pricing() {
               <span className="dollar-sign">$ </span>1.39 <span>/Month</span>
             </div>
 
-            <button type="button" className="select-btn">
+            <button type="button" className="select-btn popular">
               Select
             </button>
             <p className="renew-text">$2.99/mo when you renew</p>
           </div>
           <div>
-            <span className="feature-text">What's include</span>
+            <span className="feature-text popular">What's include</span>
             <hr />
-            <div className="feature-list">
+            <div className="feature-list popular">
               <ul>
                 <li>
                   <span className="check">
