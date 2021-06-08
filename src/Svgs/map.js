@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation, motion } from 'framer-motion';
 import { useGlobalContext } from '../context';
@@ -7,6 +7,7 @@ function Map() {
   const { setPosition, setCityName, setShowcity } = useGlobalContext();
   const { ref, inView } = useInView({ threshold: 0.5 });
   const animation = useAnimation();
+  const locationRef = useRef(null);
 
   const getPosition = (e) => {
     const posiCord = e.target.getBoundingClientRect();
@@ -18,7 +19,11 @@ function Map() {
     setCityName(elId);
     setShowcity(true);
   };
-
+  const hideSubMenu = (event) => {
+    if (!locationRef.current.contains(event.traget)) {
+      setShowcity(false);
+    }
+  };
   useEffect(() => {
     if (inView) {
       animation.start({
@@ -11199,6 +11204,8 @@ function Map() {
         fill="#667EEA"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11209,6 +11216,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11219,6 +11228,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11229,6 +11240,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11239,6 +11252,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11249,6 +11264,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11259,6 +11276,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11269,6 +11288,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11279,6 +11300,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11289,6 +11312,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11299,6 +11324,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11309,6 +11336,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11319,6 +11348,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11329,6 +11360,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11339,6 +11372,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11349,6 +11384,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11359,6 +11396,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11369,6 +11408,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11379,6 +11420,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11389,6 +11432,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11399,6 +11444,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         onMouseOver={getPosition}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
@@ -11409,6 +11456,8 @@ function Map() {
         fill="#EA4334"
       />
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         animate={animation}
         initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 2, delay: 1.5 }}
@@ -11420,6 +11469,8 @@ function Map() {
       />
 
       <motion.path
+        ref={locationRef}
+        onMouseLeave={hideSubMenu}
         className="pin"
         id="Dublin"
         animate={animation}
