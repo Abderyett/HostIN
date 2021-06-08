@@ -9,6 +9,7 @@ export function Pricing() {
         <h1>The right price for your web hosting</h1>
       </article>
       <artice className="cards-container">
+        {/* FristCard */}
         <div className="card card1">
           <div className="card-text">
             <h3>Single Shared Hosting</h3>
@@ -75,7 +76,10 @@ export function Pricing() {
             </div>
           </div>
         </div>
+
+        {/* second Card */}
         <div className="card card2">
+          <div className="badge">Most Popular</div>
           <div className="card-text">
             <h3>Premium Shared Hosting</h3>
             <p>Perfect package for personal websites</p>
@@ -165,6 +169,8 @@ export function Pricing() {
             </div>
           </div>
         </div>
+
+        {/* Third Card */}
         <div className="card card3">
           <div className="card-text">
             <h3>Business Shared Hosting </h3>
