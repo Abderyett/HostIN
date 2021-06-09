@@ -1,5 +1,8 @@
 .faq-container {
   padding-top: 5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+
   h1 {
     text-transform: capitalize;
     font-size: 4rem;
@@ -11,4 +14,12 @@
     -webkit-background-clip: text;
     color: transparent;
   }
+}
+.faq-wrapper {
+  max-width: 1080px;
+  display: flex;
+  justify-content: flex-start;
+}
+.faq-title {
+  font-family: "proxima_regular";
 }

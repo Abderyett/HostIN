@@ -8,7 +8,7 @@ export function Pricing() {
         <h2>PRICING</h2>
         <h1>The right price for your web hosting</h1>
       </article>
-      <artice className="cards-container">
+      <article className="cards-container">
         {/* FristCard */}
         <div className="card card1">
           <div className="card-text">
@@ -258,7 +258,7 @@ export function Pricing() {
             </div>
           </div>
         </div>
-      </artice>
+      </article>
     </section>
   );
 }
