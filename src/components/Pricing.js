@@ -46,13 +46,16 @@ export function Pricing() {
                   <span className="check">
                     <FaCheck /> &nbsp;
                   </span>
-                  <span className="bold-text">~10000</span> Visits Monthly
+                  <span className="bold-text">
+                    <span className="tilda">~ </span>10000
+                  </span>
+                  Visits Monthly
                 </li>
                 <li>
                   <span className="check">
                     <FaCheck /> &nbsp;
                   </span>
-                  <span className="bold-text">~100 GB</span> Bandwidth
+                  <span className="bold-text">100 GB</span> Bandwidth
                 </li>
                 <li>
                   <span className="check">
@@ -115,7 +118,10 @@ export function Pricing() {
                   <span className="check">
                     <FaCheck /> &nbsp;
                   </span>
-                  <span className="bold-text">~25000</span> Visits Monthly
+                  <span className="bold-text">
+                    <span className="tilda">~ </span>25000
+                  </span>{' '}
+                  Visits Monthly
                 </li>
                 <li>
                   <span className="check">
@@ -207,7 +213,10 @@ export function Pricing() {
                   <span className="check">
                     <FaCheck /> &nbsp;
                   </span>
-                  <span className="bold-text">~100000</span> Visits Monthly
+                  <span className="bold-text">
+                    <span className="tilda">~ </span>100000
+                  </span>{' '}
+                  Visits Monthly
                 </li>
                 <li>
                   <span className="check">

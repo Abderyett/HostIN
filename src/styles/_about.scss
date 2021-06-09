@@ -5,10 +5,12 @@
 }
 .about-heading {
   font-size: 3rem;
-  font-weight: 700;
+
+  font-family: "proxima_bold";
   padding: 10rem;
-  background: rgb(48, 207, 208);
-  background: linear-gradient(180deg, rgba(48, 207, 208, 1) 0%, rgba(51, 8, 103, 1) 78%);
+
+  background: rgb(76, 81, 191);
+  background: linear-gradient(180deg, rgba(76, 81, 191, 1) 12%, rgba(56, 190, 201, 1) 100%);
   background-clip: text;
   --moz-background-clip: text;
   -webkit-background-clip: text;
@@ -54,6 +56,13 @@
 .security-container {
   @include grid-container;
 }
+.security-img {
+  background-color: #fff;
+  background-image: radial-gradient(circle, #9fb3c8 9%, transparent 10%),
+    radial-gradient(circle, #9fb3c8 9%, transparent 10%);
+  background-size: 25px 25px;
+  background-position: 0 0, 50px 50px;
+}
 
 .support-container {
   @include grid-container;
@@ -85,6 +94,7 @@
   box-shadow: $shadow;
   border-radius: $xl;
   transition: all 0.3s ease-in-out;
+
   &:hover {
     border: 1px solid $light_blue_vivid_100;
     box-shadow: $shadow-lg;
