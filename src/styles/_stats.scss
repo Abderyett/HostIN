@@ -24,6 +24,10 @@
   }
 }
 .stats-wrapper {
+  margin: 0 auto;
+  @media (max-width: 900px) {
+    margin: 0;
+  }
   display: grid;
   grid-template-columns: 5rem 11rem;
   grid-gap: 3rem;

@@ -9,6 +9,10 @@
   justify-content: space-between;
   align-items: center;
   height: 7rem;
+  margin: 0 auto;
+  @media (max-width: 900px) {
+    margin: 0;
+  }
 }
 
 .nav-links {

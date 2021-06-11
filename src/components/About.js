@@ -12,46 +12,47 @@ export function About() {
         <hr />
         Why Choose us?
       </h1>
+      <div className="about-wrapper">
+        <div className="security-container">
+          <img src={security} alt="security-logo" className="security-img" />
+          <div className="text">
+            <div className="shield">
+              <BiCheckShield />
+            </div>
+            <h1>Redundancy and secure servers</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iste.</p>
+            <span className="check-icon">
+              <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
+            </span>
 
-      <div className="security-container">
-        <img src={security} alt="security-logo" className="security-img" />
-        <div className="text">
-          <div className="shield">
-            <BiCheckShield />
+            <span className="check-icon">
+              <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
+            </span>
+            <span className="check-icon">
+              <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
+            </span>
           </div>
-          <h1>Redundancy and secure servers</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iste.</p>
-          <span className="check-icon">
-            <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
-          </span>
-
-          <span className="check-icon">
-            <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
-          </span>
-          <span className="check-icon">
-            <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
-          </span>
         </div>
-      </div>
-      <div className="support-container">
-        <div className="text">
-          <div className="rocket">
-            <IoIosChatboxes />
+        <div className="support-container">
+          <div className="text">
+            <div className="rocket">
+              <IoIosChatboxes />
+            </div>
+            <h1>Dedicated support</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iste.</p>
+            <span className="check-icon">
+              <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
+            </span>
+
+            <span className="check-icon">
+              <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
+            </span>
+            <span className="check-icon">
+              <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
+            </span>
           </div>
-          <h1>Dedicated support</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iste.</p>
-          <span className="check-icon">
-            <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
-          </span>
-
-          <span className="check-icon">
-            <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
-          </span>
-          <span className="check-icon">
-            <IoIosCheckmarkCircle /> &nbsp; Lorem ipsum dolor sit amet.
-          </span>
+          <img src={support} alt="support-logo" className="support-img" />
         </div>
-        <img src={support} alt="support-logo" className="support-img" />
       </div>
     </section>
   );

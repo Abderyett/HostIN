@@ -1,7 +1,11 @@
 .about-container {
   margin-top: 20rem;
-  margin: 0;
+
   width: 100vw;
+}
+.about-container {
+  display: grid;
+  place-items: center;
 }
 .about-heading {
   text-transform: capitalize;
