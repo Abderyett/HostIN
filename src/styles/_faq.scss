@@ -1,5 +1,5 @@
 .faq-container {
-  padding-top: 5rem;
+  padding-top: 3rem;
   max-width: 1080px;
   margin: 0 auto;
 
@@ -26,6 +26,7 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: $shadow-sm;
 }
 @mixin text-style {
   text-align: start;
@@ -34,11 +35,12 @@
 }
 .faq-title {
   @include text-style;
-  color: $blue_grey_700;
+  color: $blue_500;
 }
 
 .faq-answer {
   line-height: 2.5rem;
+
   @include text-style;
 }
 
@@ -51,4 +53,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
