@@ -38,14 +38,3 @@ export function Footer() {
     </footer>
   );
 }
-
-/* <div className="menu-items" key={index}>
-<a href={el.url} className="link-submenu">
-  <span className="label-submenu">
-    {el.label}&nbsp;
-    <span className="hooverArrow">
-      <BsArrowRightShort className="link-arrow" />
-    </span>
-  </span>
-</a>
-</div> */
