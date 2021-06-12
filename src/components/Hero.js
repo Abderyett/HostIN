@@ -25,18 +25,20 @@ export function Hero() {
               What's more important than fast, reliable, and secure web hosting? It's trust! End up your inconvenience
               forever by trusting us, and we bet you'll never be dissatisfied!
             </p>
-            <button type="button" className="btn start-btn">
-              Start Now &nbsp;
-              <span>
-                <BsChevronRight />
-              </span>
-            </button>
-            <button type="button" className="btn contact-btn">
-              Contact Sales &nbsp;
-              <span>
-                <BsChevronRight />
-              </span>
-            </button>
+            <div className="btn-hero">
+              <button type="button" className="btn start-btn">
+                Start Now &nbsp;
+                <span>
+                  <BsChevronRight />
+                </span>
+              </button>
+              <button type="button" className="btn contact-btn">
+                Contact Sales &nbsp;
+                <span>
+                  <BsChevronRight />
+                </span>
+              </button>
+            </div>
           </div>
           <img className="data-center" src={dataCenter} alt="data-center" />
         </div>

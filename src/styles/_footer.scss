@@ -4,7 +4,7 @@
   padding: 5rem;
   max-width: 1080px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-columns: repeat(auto-fit, 1fr);
   place-items: center;
   place-content: center;
   grid-gap: 2rem;
@@ -33,7 +33,10 @@
 .links-wrapper {
   display: grid;
   grid-gap: 4rem;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .footer-sublinks {

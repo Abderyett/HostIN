@@ -1,5 +1,5 @@
 .hero-container {
-  height: 80vh;
+  height: 85vh;
   position: relative;
   margin: 0 auto;
   @media (max-width: 900px) {
@@ -42,6 +42,9 @@
   @media (max-width: 768px) {
     width: 400px;
   }
+  @media (max-width: 400px) {
+    display: none;
+  }
 }
 
 .hero-text {
@@ -51,6 +54,9 @@
   margin-top: 6rem;
   @media (max-width: 900px) {
     margin-top: 6rem;
+  }
+  @media (max-width: 768px) {
+    margin-top: 4rem;
   }
   h1 {
     font-size: 4.8rem;
@@ -68,6 +74,7 @@
     padding-bottom: 3rem;
     @media (max-width: 768px) {
       font-size: 2rem;
+      padding-bottom: 1.5rem;
     }
   }
   @media (max-width: 768px) {
@@ -85,6 +92,15 @@
   font-family: "proxima_bold";
   margin-top: 4rem;
   position: relative;
+
+  @media (max-width: 500px) {
+    margin-top: 2rem;
+  }
+}
+.btn-hero {
+  @media (max-width: 400px) {
+    display: grid;
+  }
 }
 
 @mixin hover-btn {
