@@ -4,6 +4,7 @@
 
 import React, { useState } from 'react';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
+import { motion } from 'framer-motion';
 import { faq } from '../faqData';
 
 export function Faq() {
@@ -19,13 +20,32 @@ export function Faq() {
     <section className="faq-container">
       <h1>Frequently asked questions ?</h1>
       {faq.map((el, index) => (
-        <article key={el.id} className="faq-wrapper">
+        <motion.article
+          animate={{ backgroundColor: activeIndex === index ? '#f0f4f8' : '#fff' }}
+          key={el.id}
+          className="faq-wrapper"
+        >
           <div className="title-wrapper" onClick={() => toggle(index)}>
             <p className="faq-title">{el.title}</p>
             <span className="chevron">{activeIndex === index ? <BiChevronUp /> : <BiChevronDown />}</span>
           </div>
-          {activeIndex === index && <p className="faq-answer">{el.answer}</p>}
-        </article>
+          {activeIndex === index && (
+            <motion.p
+              key="content"
+              initial="collapsed"
+              animate="open"
+              exit="collapsed"
+              variants={{
+                open: { opacity: 1, height: 'auto' },
+                collapsed: { opacity: 0, height: 0 },
+              }}
+              transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
+              className="faq-answer"
+            >
+              {el.answer}
+            </motion.p>
+          )}
+        </motion.article>
       ))}
     </section>
   );
