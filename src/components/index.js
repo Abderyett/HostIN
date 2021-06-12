@@ -8,3 +8,4 @@ export * from './Stats';
 export * from './Maps';
 export * from './Pricing';
 export * from './Faq';
+export * from './Footer';

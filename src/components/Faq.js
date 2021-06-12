@@ -21,7 +21,7 @@ export function Faq() {
       <h1>Frequently asked questions ?</h1>
       {faq.map((el, index) => (
         <motion.article
-          animate={{ backgroundColor: activeIndex === index ? '#f0f4f8' : '#fff' }}
+          animate={{ backgroundColor: activeIndex === index ? '#ebf4ff' : '#fff' }}
           key={el.id}
           className="faq-wrapper"
         >

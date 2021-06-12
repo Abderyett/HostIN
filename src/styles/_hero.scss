@@ -104,9 +104,11 @@
   @include btn;
   background: $yellow_500;
   color: $black;
+
   @include arrow-position;
   &:hover {
-    background: rgba($yellow_400, 0.8);
+    background: $yellow_vivid_400;
+
     cursor: pointer;
     @include hover-btn;
   }
@@ -115,7 +117,7 @@
 .contact-btn {
   @include btn;
   &:hover {
-    color: rgba($white, 0.8);
+    color: $grey_200;
     cursor: pointer;
     @include hover-btn;
   }
