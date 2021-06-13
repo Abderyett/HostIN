@@ -44,7 +44,6 @@ export function Sidebar() {
         </aside>
       </div>
     </aside>,
-
     document.querySelector('#modal')
   );
 }

@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba($black, 0.3);
+  background: rgba($grey_700, 0.5);
   display: block;
   z-index: 9999;
 
@@ -18,7 +18,7 @@
 }
 
 .modal-container {
-  width: 95%;
+  width: 94%;
   position: relative;
   top: 1rem;
   background: $white;
@@ -26,8 +26,22 @@
   margin: 0 auto;
   max-width: 900px;
   border-radius: $lg;
-  height: 95%;
+  height: auto;
   overflow: auto;
+  animation-name: pop;
+  animation-duration: 0.15s;
+  animation-timing-function: ease-out;
+}
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .close-btn {
@@ -50,9 +64,9 @@
     text-align: start;
     color: $grey_500;
     margin-bottom: 2rem;
-    @media (max-width: 768px) {
-      margin-bottom: 1rem;
-    }
+    // @media (max-width: 768px) {
+    //   margin-bottom: 1rem;
+    // }
   }
 }
 
@@ -60,9 +74,9 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
-  @media (max-width: 768px) {
-    grid-gap: 0.75rem;
-  }
+  // @media (max-width: 768px) {
+  //   grid-gap: 0.75rem;
+  // }
 }
 
 .links {
@@ -73,9 +87,9 @@
   justify-items: start;
   align-items: center;
   align-content: center;
-  @media (max-width: 768px) {
-    grid-auto-rows: 3rem;
-  }
+  // @media (max-width: 768px) {
+  //   grid-auto-rows: 3rem;
+  // }
 }
 .link {
   text-decoration: none;
