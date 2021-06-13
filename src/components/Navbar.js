@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import { FaBars } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 import logo from '../Svgs/logo.svg';
 import { useGlobalContext } from '../context';
@@ -38,11 +39,11 @@ export function Navbar() {
           <li onMouseOver={displaySubMenu}>Company</li>
           <li onMouseOver={hideSubMenu}>Domain</li>
         </ul>
-        <a href="/" className="sign-in" onMouseOver={hideSubMenu}>
+        <Link to="/login" className="sign-in" onMouseOver={hideSubMenu}>
           <span>
             Sign in <BsArrowRightShort className="arrow-icon" />
           </span>
-        </a>
+        </Link>
         <button className="toggle-btn" type="button" onClick={() => setShowNav(true)}>
           <FaBars className="hamburger-menu" />
         </button>
