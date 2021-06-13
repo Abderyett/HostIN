@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import { FaBars } from 'react-icons/fa';
+
 import logo from '../Svgs/logo.svg';
 import { useGlobalContext } from '../context';
 
