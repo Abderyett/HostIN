@@ -18,11 +18,11 @@ export function Footer() {
 
       <article className="links-wrapper">
         {data.map((el) => (
-          <div className="footer-links">
+          <div className="footer-links" key={el.id}>
             <h3 className="footer-heading">{el.page}</h3>
             <div className="footer-sublinks">
-              {el.links.map((link) => (
-                <a href={link.url} className="link-footer link-submenu">
+              {el.links.map((link, index) => (
+                <a href={link.url} className="link-footer link-submenu" key={index}>
                   <span className="label-submenu">
                     {link.label}&nbsp;
                     <span className="hooverArrow">
@@ -35,6 +35,8 @@ export function Footer() {
           </div>
         ))}
       </article>
+      <div className="separator" />
+      <div className="text-copyright"> © {new Date().getFullYear()} Copyright Host-In</div>
     </footer>
   );
 }

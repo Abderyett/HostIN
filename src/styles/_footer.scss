@@ -53,6 +53,7 @@
   text-align: start;
 }
 .footer-text {
+  text-align: start;
   p {
     padding-top: 2rem;
     width: 40ch;
@@ -65,4 +66,25 @@
   width: 2.5rem;
   vertical-align: top;
   margin-right: 1rem;
+}
+
+.separator {
+  max-width: 1080px;
+
+  border: 0.8px solid $grey_500;
+  width: 90vw;
+  justify-self: start;
+  margin-bottom: 4rem;
+  @media (max-width: 900px) {
+    margin-bottom: 2rem;
+  }
+}
+
+.text-copyright {
+  justify-self: start;
+  font-weight: 300;
+  font-size: 1.5rem;
+  @media (max-width: 900px) {
+    justify-self: center;
+  }
 }
