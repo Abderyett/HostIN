@@ -1,0 +1,67 @@
+.form-container {
+  background: $purple_200;
+  height: 100vh;
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.form-wrapper {
+  max-width: 400px;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background: $white;
+  border-radius: $md;
+  box-shadow: $shadow-md;
+}
+
+.form-heading {
+  color: $blue_grey_700;
+
+  text-align: start;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.email-input,
+.password-input {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding-bottom: 2rem;
+  input {
+    height: 4rem;
+    border-radius: $md;
+    border: 1px solid $grey_400;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px $blue_200;
+    }
+  }
+}
+
+.password-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-btn {
+  width: 100%;
+  background: $indigo_600;
+  color: $white;
+  padding: 1rem 2rem;
+  border-radius: $md;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  &:hover {
+    background: $indigo_500;
+  }
+}
