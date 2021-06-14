@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export function SignIn() {
+export function Register() {
   return (
     <div className="form-container">
       <div className="wrap">
@@ -13,24 +13,31 @@ export function SignIn() {
               <label htmlFor="email"> Email</label>
               <input id="email" type="email" name="email" />
             </div>
+            <div className="email-input">
+              <label htmlFor="name"> Full name</label>
+              <input id="name" type="name" name="name" />
+            </div>
             <div className="password-input">
               <div className="password-text">
                 <label htmlFor="password"> Password</label>
-
-                <Link className="password-reset" to="/reset">
-                  Forgot your password?
-                </Link>
               </div>
 
               <input id="password" type="password" name="password" />
             </div>
+            <div className="password-input">
+              <div className="password-text">
+                <label htmlFor="confirm-password"> Confirm password</label>
+              </div>
+
+              <input id="confirm-password" type="password" name="password" />
+            </div>
             <button className="submit-btn" type="submit">
-              Continue
+              Create account
             </button>
           </form>
         </div>
         <div className="register-text">
-          Don't have an account? &nbsp; <Link to="/register"> Sign up</Link>
+          Have an account? &nbsp; <Link to="/login"> Sign in</Link>
         </div>
       </div>
     </div>
