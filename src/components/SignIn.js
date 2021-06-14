@@ -29,8 +29,10 @@ export function SignIn() {
             </button>
           </form>
         </div>
+        <div className="register-text">
+          Don't have an account? &nbsp; <Link to="/register"> Sign up</Link>
+        </div>
       </div>
-      Don't have an account? <Link to="/register">Sign up</Link>
     </div>
   );
 }
