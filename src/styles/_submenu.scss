@@ -36,7 +36,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: start;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
+  padding: 1rem;
 }
 .submenu.show {
   display: block;

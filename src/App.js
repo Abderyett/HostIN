@@ -7,6 +7,7 @@ import { SignIn } from './components/SignIn';
 import { Sidebar } from './components/Sidebar';
 import { Register } from './components/Register';
 import { Reset } from './components/Reset';
+import { Domain } from './components/Domain';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/login" component={SignIn} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/reset" component={Reset} />
+        <Route exact path="/domain" component={Domain} />
       </AppProvider>
     </Switch>
   );

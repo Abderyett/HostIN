@@ -19,6 +19,12 @@
   display: flex;
   cursor: pointer;
 
+  a {
+    color: $white;
+    &:hover {
+      color: rgba($white, 0.8);
+    }
+  }
   li {
     margin-right: 4rem;
     &:hover {
