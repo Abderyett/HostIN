@@ -11,6 +11,7 @@ function AppProvider({ children }) {
   const [position, setPosition] = useState({});
   const [cityName, setCityName] = useState('');
   const [showcity, setShowcity] = useState(false);
+  const [searchTerm, setsearchTerm] = useState('');
 
   const [subMenuPage, setsubMenuPage] = useState({ page: '', links: [] });
 
@@ -37,6 +38,8 @@ function AppProvider({ children }) {
         setCityName,
         showcity,
         setShowcity,
+        searchTerm,
+        setsearchTerm,
       }}
     >
       {children}

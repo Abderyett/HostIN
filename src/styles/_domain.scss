@@ -10,7 +10,7 @@
   left: 0;
   background: $indigo_600;
   width: 100%;
-  height: 60%;
+  height: 80%;
   z-index: -1;
 }
 
@@ -58,4 +58,27 @@
   &:hover {
     background: $cyan_500;
   }
+}
+.domain-suggestion {
+  color: $white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 10rem);
+  grid-gap: 1.5rem;
+  place-items: center;
+  margin-top: 5rem;
+  justify-content: center;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+.domain {
+  padding-right: 2.2rem;
+  position: relative;
+}
+.domain::before {
+  content: "";
+  border-right: 2px solid $white;
+  height: 4.9rem;
+  position: absolute;
+  right: 0;
+  top: 4px;
 }
