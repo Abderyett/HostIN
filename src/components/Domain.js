@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Navbar } from './Navbar';
 import { Submenu } from './Submenu';
 import { useGlobalContext } from '../context';
+import { extensions } from '../tldExtensions';
 
 export function Domain() {
   const { setSubmenu, searchTerm, setSearchTerm, tld, setTld } = useGlobalContext();
@@ -18,7 +19,9 @@ export function Domain() {
 
   const fetching = async () => {
     const res = await axios.get(
-      `https://domain-availability.whoisxmlapi.com/api/v1?apiKey=${process.env.REACT_APP_DOMAIN_KEY}&domainName=${searchTerm}${tld}&credits=DA`
+      `https://domain-availability.whoisxmlapi.com/api/v1?apiKey=${
+        process.env.REACT_APP_DOMAIN_KEY
+      }&domainName=${searchTerm}${tld || '.com'}&credits=DA`
     );
 
     console.log(res.data);
@@ -27,15 +30,151 @@ export function Domain() {
     setTld(e.target.dataset.tld);
   };
 
-  const handlSubmit = (e) => {
-    e.preventDefault();
-    fetching();
-    setSearchTerm('');
-    setTld('.com');
-  };
+  // '.com' || '.online' || '.xyz' || '.link' || '.live' || '.digital'
 
   const handleChange = (e) => {
+    if (
+      e.target.value.includes(
+        '.com' ||
+          '.online' ||
+          '.xyz' ||
+          '.link' ||
+          '.live' ||
+          '.digital' ||
+          '.me' ||
+          '.net' ||
+          '.tech' ||
+          '.email' ||
+          '.help' ||
+          '.click' ||
+          '.site' ||
+          '.store' ||
+          '.space' ||
+          '.website' ||
+          '.in' ||
+          '.uno' ||
+          '.host' ||
+          '.fun' ||
+          '.press' ||
+          '.asia' ||
+          '.biz' ||
+          '.ca' ||
+          '.co.in' ||
+          '.co.uk' ||
+          '.com.ru' ||
+          '.es' ||
+          '.eu' ||
+          '.firm.in' ||
+          '.gen.in' ||
+          '.ind.in' ||
+          '.info' ||
+          '.mobi' ||
+          '.name' ||
+          '.net.in' ||
+          '.net.ru' ||
+          '.org' ||
+          '.org.in' ||
+          '.org.ru' ||
+          '.org.uk' ||
+          '.pw' ||
+          '.ru' ||
+          '.ws' ||
+          '.be' ||
+          '.ch' ||
+          '.co' ||
+          '.com.co' ||
+          '.com.es' ||
+          '.cz' ||
+          '.de' ||
+          '.fr' ||
+          '.gr' ||
+          '.ist' ||
+          '.istanbul' ||
+          '.it' ||
+          '.me.uk' ||
+          '.nl' ||
+          '.nom.es' ||
+          '.nu' ||
+          '.org.es' ||
+          '.pl' ||
+          '.se' ||
+          '.xyz' ||
+          '.cat' ||
+          '.ae.org' ||
+          '.ag' ||
+          '.am' ||
+          '.at' ||
+          '.biz.pl' ||
+          '.bz' ||
+          '.cc' ||
+          '.cl' ||
+          '.cn.com' ||
+          '.com.de' ||
+          '.com.mx' ||
+          '.com.pl' ||
+          '.com.pt' ||
+          '.com.se' ||
+          '.cx' ||
+          '.dk' ||
+          '.fm' ||
+          '.frl' ||
+          '.gr.com' ||
+          '.in.net' ||
+          '.info.pl' ||
+          '.jp.net' ||
+          '.la' ||
+          '.lc' ||
+          '.li' ||
+          '.lt' ||
+          '.lu' ||
+          '.lv' ||
+          '.mn' ||
+          '.mx' ||
+          '.net.pl' ||
+          '.pm' ||
+          '.pt' ||
+          '.re' ||
+          '.sc' ||
+          '.tf' ||
+          '.tv' ||
+          '.vc' ||
+          '.wf' ||
+          '.xxx' ||
+          '.yt' ||
+          '.us' ||
+          '.uk' ||
+          '.shop' ||
+          '.club' ||
+          '.icu' ||
+          '.agency' ||
+          '.company' ||
+          '.group' ||
+          '.guru' ||
+          '.life' ||
+          '.ltd' ||
+          '.network' ||
+          '.news' ||
+          '.rocks' ||
+          '.services' ||
+          '.solutions' ||
+          '.today' ||
+          '.world' ||
+          '.top' ||
+          '.com.au' ||
+          '.cloud' ||
+          '.properties' ||
+          '.business'
+      )
+    ) {
+      return setTld('');
+    }
     setSearchTerm(e.target.value);
+  };
+  const handlSubmit = (e) => {
+    e.preventDefault();
+
+    fetching();
+    setSearchTerm('');
   };
 
   // useEffect(() => {

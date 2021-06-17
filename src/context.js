@@ -12,7 +12,7 @@ function AppProvider({ children }) {
   const [cityName, setCityName] = useState('');
   const [showcity, setShowcity] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const [tld, setTld] = useState('.com');
+  const [tld, setTld] = useState('');
 
   const [subMenuPage, setsubMenuPage] = useState({ page: '', links: [] });
 
