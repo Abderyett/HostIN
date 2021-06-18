@@ -1,6 +1,10 @@
 .search-container {
+  height: 60vh;
   width: 100vw;
-  height: 100vh;
+
+  @media (max-width: 768px) {
+    height: 85vh;
+  }
 }
 
 .search-container::before {
@@ -10,8 +14,20 @@
   left: 0;
   background: $indigo_600;
   width: 100%;
-  height: 80%;
+  height: 60%;
   z-index: -1;
+}
+@media (max-width: 768px) {
+  .search-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $indigo_600;
+    width: 100%;
+    height: 85%;
+    z-index: -1;
+  }
 }
 
 .search-wrapper {
@@ -39,6 +55,9 @@
   width: 520px;
   font-size: 1.6rem;
   color: $grey_700;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
   &:focus {
     outline: none;
     box-shadow: 0 0 0 3px $cyan_300;
@@ -55,8 +74,19 @@
   cursor: pointer;
   margin-left: 2rem;
   font-weight: bold;
+  @media (max-width: 768px) {
+    width: 90%;
+    margin-top: 2rem;
+    margin-left: 0;
+  }
   &:hover {
     background: $cyan_500;
+    transition: all 0.6s ease;
+  }
+  &:active {
+    transform: translateY(2px);
+    box-shadow: $shadow-xl;
+    transition: transform 0.6s ease-out;
   }
 }
 .domain-suggestion {
@@ -70,6 +100,7 @@
   font-size: 2.2rem;
   cursor: pointer;
 }
+
 .domain {
   padding-right: 2.2rem;
   position: relative;

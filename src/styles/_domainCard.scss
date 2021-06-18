@@ -1,0 +1,37 @@
+.domain-card-container {
+  width: 100vw;
+  height: 100vh;
+}
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.domain-status {
+  width: 100%;
+  background: $cyan_400;
+
+  border-top-right-radius: $md;
+  border-top-left-radius: $md;
+  color: $white;
+  text-align: start;
+  padding: 1rem;
+  font-family: "proxima_bold";
+  font-size: 2rem;
+}
+
+.domain-card {
+  background: $white;
+  border-radius: $md;
+  box-shadow: $shadow-md;
+  width: 90%;
+  max-width: 1080px;
+  border: 1px solid $grey_300;
+  margin-top: 10rem;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: center;
+}
