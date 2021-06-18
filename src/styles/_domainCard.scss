@@ -1,6 +1,5 @@
 .domain-card-container {
   width: 100vw;
-  height: 100vh;
 }
 .card-wrapper {
   display: flex;
@@ -56,6 +55,9 @@
     background: $indigo_500;
   }
 }
+.domain-dollar-sign {
+  font-family: "proxima_bold";
+}
 
 .yearly-price {
   margin-left: 2rem;
@@ -86,4 +88,21 @@
   &:hover {
     background: $indigo_500;
   }
+}
+
+.option-text {
+  margin-top: 10rem;
+  font-size: 4.8rem;
+  color: $blue_800;
+  font-family: "proxima_bold";
+  margin-bottom: 4rem;
+}
+
+.domain-card-options {
+  background: $white;
+  border-radius: $md;
+  box-shadow: $shadow-md;
+  width: 90%;
+  max-width: 1080px;
+  border: 1px solid $grey_300;
 }
