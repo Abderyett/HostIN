@@ -1,5 +1,4 @@
 export const extensions = [
-  '.com',
   '.online',
   '.xyz',
   '.link',

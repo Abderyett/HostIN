@@ -41,20 +41,30 @@
 .domain-price {
   display: flex;
   align-items: center;
+  text-align: start;
+  margin-right: 10rem;
 }
-
-.save-btn {
-  @include btn;
-  padding: 1rem 1.5rem;
-  letter-spacing: 0.2rem;
+.price-wrapper {
+  display: flex;
+  align-items: center;
+}
+@mixin save-btn {
+  padding: 0.5rem 1.2rem;
   font-size: 1.5rem;
   font-family: "proxima_bold";
-  transition: all 0.3s ease-in-out;
 
-  &:hover {
-    background: $indigo_500;
-  }
+  background: $indigo_400;
 }
+.save-btn {
+  @include btn;
+  @include save-btn;
+}
+.save-btn-first {
+  @include btn;
+  @include save-btn;
+  background: $cyan_300;
+}
+
 .domain-dollar-sign {
   font-family: "proxima_bold";
 }
@@ -77,16 +87,27 @@
   font-family: "proxima_bold";
   color: $blue_800;
 }
-
-.cart-btn {
-  @include btn;
+@mixin cart-btn {
   padding: 1.5rem 3rem;
   font-family: "proxima_bold";
   font-size: 2rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  background: $indigo_600;
   &:hover {
     background: $indigo_500;
+  }
+}
+.cart-btn {
+  @include btn;
+  @include cart-btn;
+}
+.cart-btn-first {
+  @include btn;
+  @include cart-btn;
+  background: $cyan_500;
+  &:hover {
+    background: $cyan_300;
   }
 }
 
@@ -100,9 +121,16 @@
 
 .domain-card-options {
   background: $white;
-  border-radius: $md;
+
   box-shadow: $shadow-md;
   width: 90%;
   max-width: 1080px;
   border: 1px solid $grey_300;
+}
+.card-border {
+  background: $white;
+  border-radius: $lg;
+  box-shadow: $shadow-md;
+  width: 90%;
+  max-width: 1080px;
 }
