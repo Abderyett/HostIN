@@ -10,6 +10,7 @@ import { DomainCard } from './DomainCard';
 export function Domain() {
   const { setSubmenu, searchTerm, setSearchTerm, tld, setTld, setDomain, setLoading } = useGlobalContext();
   const ref = useRef(null);
+  const sub = searchTerm.indexOf('.');
 
   const hideSubMenu = (event) => {
     if (!ref.current.contains(event.traget)) {
@@ -19,11 +20,12 @@ export function Domain() {
 
   const fetching = async () => {
     setLoading(true);
+
     try {
       const res = await axios.get(
-        `https://domain-availability.whoisxmlapi.com/api/v1?apiKey=${
-          process.env.REACT_APP_DOMAIN_KEY
-        }&domainName=${searchTerm}${tld || '.com'}&credits=DA`
+        `https://domain-availability.whoisxmlapi.com/api/v1?apiKey=${process.env.REACT_APP_DOMAIN_KEY}&domainName=${
+          !searchTerm.includes('.') ? `${searchTerm}${tld}` : `${searchTerm}`
+        }&credits=DA`
       );
       console.log(res.data.DomainInfo);
       setDomain(res.data.DomainInfo);
@@ -38,141 +40,6 @@ export function Domain() {
   };
 
   const handleChange = (e) => {
-    if (
-      e.target.value.includes(
-        '.com' ||
-          '.online' ||
-          '.xyz' ||
-          '.link' ||
-          '.live' ||
-          '.digital' ||
-          '.me' ||
-          '.net' ||
-          '.tech' ||
-          '.email' ||
-          '.help' ||
-          '.click' ||
-          '.site' ||
-          '.store' ||
-          '.space' ||
-          '.website' ||
-          '.in' ||
-          '.uno' ||
-          '.host' ||
-          '.fun' ||
-          '.press' ||
-          '.asia' ||
-          '.biz' ||
-          '.ca' ||
-          '.co.in' ||
-          '.co.uk' ||
-          '.com.ru' ||
-          '.es' ||
-          '.eu' ||
-          '.firm.in' ||
-          '.gen.in' ||
-          '.ind.in' ||
-          '.info' ||
-          '.mobi' ||
-          '.name' ||
-          '.net.in' ||
-          '.net.ru' ||
-          '.org' ||
-          '.org.in' ||
-          '.org.ru' ||
-          '.org.uk' ||
-          '.pw' ||
-          '.ru' ||
-          '.ws' ||
-          '.be' ||
-          '.ch' ||
-          '.co' ||
-          '.com.co' ||
-          '.com.es' ||
-          '.cz' ||
-          '.de' ||
-          '.fr' ||
-          '.gr' ||
-          '.ist' ||
-          '.istanbul' ||
-          '.it' ||
-          '.me.uk' ||
-          '.nl' ||
-          '.nom.es' ||
-          '.nu' ||
-          '.org.es' ||
-          '.pl' ||
-          '.se' ||
-          '.xyz' ||
-          '.cat' ||
-          '.ae.org' ||
-          '.ag' ||
-          '.am' ||
-          '.at' ||
-          '.biz.pl' ||
-          '.bz' ||
-          '.cc' ||
-          '.cl' ||
-          '.cn.com' ||
-          '.com.de' ||
-          '.com.mx' ||
-          '.com.pl' ||
-          '.com.pt' ||
-          '.com.se' ||
-          '.cx' ||
-          '.dk' ||
-          '.fm' ||
-          '.frl' ||
-          '.gr.com' ||
-          '.in.net' ||
-          '.info.pl' ||
-          '.jp.net' ||
-          '.la' ||
-          '.lc' ||
-          '.li' ||
-          '.lt' ||
-          '.lu' ||
-          '.lv' ||
-          '.mn' ||
-          '.mx' ||
-          '.net.pl' ||
-          '.pm' ||
-          '.pt' ||
-          '.re' ||
-          '.sc' ||
-          '.tf' ||
-          '.tv' ||
-          '.vc' ||
-          '.wf' ||
-          '.xxx' ||
-          '.yt' ||
-          '.us' ||
-          '.uk' ||
-          '.shop' ||
-          '.club' ||
-          '.icu' ||
-          '.agency' ||
-          '.company' ||
-          '.group' ||
-          '.guru' ||
-          '.life' ||
-          '.ltd' ||
-          '.network' ||
-          '.news' ||
-          '.rocks' ||
-          '.services' ||
-          '.solutions' ||
-          '.today' ||
-          '.world' ||
-          '.top' ||
-          '.com.au' ||
-          '.cloud' ||
-          '.properties' ||
-          '.business'
-      )
-    ) {
-      return setTld('');
-    }
     setSearchTerm(e.target.value);
   };
   const handlSubmit = (e) => {

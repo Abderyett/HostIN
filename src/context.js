@@ -12,7 +12,8 @@ function AppProvider({ children }) {
   const [cityName, setCityName] = useState('');
   const [showcity, setShowcity] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const [tld, setTld] = useState('');
+  const [submittedTerm, setSubmittedTerm] = useState('');
+  const [tld, setTld] = useState('.com');
   const [loading, setLoading] = useState(false);
   const [subMenuPage, setsubMenuPage] = useState({ page: '', links: [] });
   const [domain, setDomain] = useState({});
@@ -48,6 +49,8 @@ function AppProvider({ children }) {
         setLoading,
         domain,
         setDomain,
+        submittedTerm,
+        setSubmittedTerm,
       }}
     >
       {children}
