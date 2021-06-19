@@ -8,7 +8,7 @@ import { useGlobalContext } from '../context';
 import { DomainCard } from './DomainCard';
 
 export function Domain() {
-  const { setSubmenu, searchTerm, setSearchTerm, tld, setTld } = useGlobalContext();
+  const { setSubmenu, searchTerm, setSearchTerm, tld, setTld, setDomain, setLoading } = useGlobalContext();
   const ref = useRef(null);
 
   const hideSubMenu = (event) => {
@@ -18,14 +18,21 @@ export function Domain() {
   };
 
   const fetching = async () => {
-    const res = await axios.get(
-      `https://domain-availability.whoisxmlapi.com/api/v1?apiKey=${
-        process.env.REACT_APP_DOMAIN_KEY
-      }&domainName=${searchTerm}${tld || '.com'}&credits=DA`
-    );
-
-    console.log(res.data);
+    setLoading(true);
+    try {
+      const res = await axios.get(
+        `https://domain-availability.whoisxmlapi.com/api/v1?apiKey=${
+          process.env.REACT_APP_DOMAIN_KEY
+        }&domainName=${searchTerm}${tld || '.com'}&credits=DA`
+      );
+      console.log(res.data.DomainInfo);
+      setDomain(res.data.DomainInfo);
+      setLoading(false);
+    } catch (error) {
+      console.log('oh no there is an error!');
+    }
   };
+
   const getDomainName = (e) => {
     setTld(e.target.dataset.tld);
   };

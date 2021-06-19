@@ -13,8 +13,9 @@ function AppProvider({ children }) {
   const [showcity, setShowcity] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [tld, setTld] = useState('');
-
+  const [loading, setLoading] = useState(false);
   const [subMenuPage, setsubMenuPage] = useState({ page: '', links: [] });
+  const [domain, setDomain] = useState({});
 
   const showSubMenu = (text, coordinate) => {
     const page = data.find((link) => link.page === text);
@@ -43,6 +44,10 @@ function AppProvider({ children }) {
         setSearchTerm,
         tld,
         setTld,
+        loading,
+        setLoading,
+        domain,
+        setDomain,
       }}
     >
       {children}
