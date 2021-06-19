@@ -10,7 +10,6 @@ import { DomainCard } from './DomainCard';
 export function Domain() {
   const { setSubmenu, searchTerm, setSearchTerm, tld, setTld, setDomain, setLoading } = useGlobalContext();
   const ref = useRef(null);
-  const sub = searchTerm.indexOf('.');
 
   const hideSubMenu = (event) => {
     if (!ref.current.contains(event.traget)) {
