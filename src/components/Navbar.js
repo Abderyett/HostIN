@@ -29,9 +29,9 @@ export function Navbar() {
       <nav className="nav" ref={ref} />
 
       <div className="wrapper">
-        <h2 className="logo" onMouseOver={hideSubMenu}>
+        <Link to="/" className="logo" onMouseOver={hideSubMenu}>
           <img className="logo-image" src={logo} alt="logo" /> Host-IN
-        </h2>
+        </Link>
         <ul className="nav-links">
           <li onMouseOver={displaySubMenu}>Hosting</li>
           <li onMouseOver={displaySubMenu}>Solution</li>

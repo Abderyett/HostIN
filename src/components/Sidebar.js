@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BsX, BsArrowRightShort } from 'react-icons/bs';
 import { v4 as uuidv4 } from 'uuid';
+import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../context';
 import data from '../data';
 
@@ -21,7 +22,7 @@ export function Sidebar() {
                   <h1> {el.page}</h1>
                   <div className="links">
                     {el.links.map((link) => (
-                      <a href={link.url} key={uuidv4()} className="link">
+                      <Link to={link.url} key={uuidv4()} className="link" onClick={() => setShowNav(false)}>
                         <span className="icon">{link.icon}</span>
                         <span className="label">
                           {link.label}&nbsp;
@@ -29,7 +30,7 @@ export function Sidebar() {
                             <BsArrowRightShort className="link-arrow" />
                           </span>
                         </span>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </article>

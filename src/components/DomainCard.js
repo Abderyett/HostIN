@@ -83,7 +83,7 @@ export function DomainCard() {
             </div>
           </div>
           {loading ? (
-            <Loader style={{ margin: '10rem' }} />
+            ''
           ) : (
             <>
               <h1 className={`${domainAvailability === 'UNAVAILABLE' ? 'option-text hidden' : 'option-text'}`}>
@@ -91,6 +91,7 @@ export function DomainCard() {
               </h1>
               {extensions.map((el, index) => (
                 <div
+                  id="card"
                   className={`${domainAvailability === 'UNAVAILABLE' ? 'card-wrapper hidden' : 'card-wrapper'}`}
                   key={index}
                 >

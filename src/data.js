@@ -19,7 +19,7 @@ const sublinks = [
     links: [
       { label: 'Website bundle', icon: <FaBook />, url: '/products' },
       { label: 'Custom web design', icon: <FaBook />, url: '/products' },
-      { label: 'Help', icon: <FaBook />, url: '/products' },
+      { label: 'Domain', icon: <FaBook />, url: '/domain' },
       { label: 'Billing', icon: <FaBook />, url: '/products' },
     ],
   },

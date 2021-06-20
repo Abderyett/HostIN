@@ -1,0 +1,15 @@
+.digital {
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+.live {
+  @media (max-width: 690px) {
+    display: none;
+  }
+}
+.link {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}

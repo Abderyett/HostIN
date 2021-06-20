@@ -1,11 +1,13 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import axios from 'axios';
+import { Link } from 'react-scroll';
 import { Navbar } from './Navbar';
 import { Submenu } from './Submenu';
 import { useGlobalContext } from '../context';
 import { DomainCard } from './DomainCard';
+import { DomainList } from './DomainList';
 
 export function Domain() {
   const { setSubmenu, searchTerm, setSearchTerm, tld, setTld, setDomain, setLoading } = useGlobalContext();
@@ -60,9 +62,11 @@ export function Domain() {
           </p>
           <form>
             <input className="domain-input" type="text" value={searchTerm} onChange={handleChange} />
-            <button className="search-btn" type="submit" onClick={handlSubmit}>
-              Search
-            </button>
+            <Link to="card" smooth>
+              <button className="search-btn" type="submit" onClick={handlSubmit}>
+                Search
+              </button>
+            </Link>
             <div className="domain-suggestion">
               <div onClick={getDomainName} onKeyDown={getDomainName} className=" domain domain-com">
                 <h3 data-tld=".com">.com</h3>
@@ -97,6 +101,8 @@ export function Domain() {
           </form>
         </div>
       </div>
+      <DomainList />
+
       <DomainCard />
     </>
   );
