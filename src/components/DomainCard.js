@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { extensions } from '../tldExtensions';
 import { useGlobalContext } from '../context';
 
@@ -22,7 +22,9 @@ export function DomainCard() {
       <div className="domain-card-container">
         <div className="card-wrapper">
           <div className="domain-card">
-            <div className="domain-status">Domain is avaiable!</div>
+            <div className={`${domainAvailability === 'UNAVAILABLE' ? 'domain-status unavailable' : 'domain-status'}`}>
+              Domain is {domainAvailability === 'AVAILABLE' ? 'available' : 'taken'}
+            </div>
             <div className="card-content">
               {loading ? (
                 <Loader />
@@ -31,26 +33,30 @@ export function DomainCard() {
                   <div className="domain-info">
                     <h2>{domainName}</h2>
                   </div>
-                  <div className="price-wrapper">
-                    <div className="domain-price">
-                      <button type="button" className="save-btn-first">
-                        SAVE 18%
-                      </button>
-                      <div className="yearly-price">
-                        <div className="old-price">
-                          <span>$10.99</span>
-                        </div>
-                        <div className="current-price">
-                          <span className="dollar-sign">$ </span>1.39 <span>/Month</span>
+                  {domainAvailability === 'UNAVAILABLE' ? (
+                    <h2>Sorry, this domain is already taken</h2>
+                  ) : (
+                    <div className="price-wrapper">
+                      <div className="domain-price">
+                        <button type="button" className="save-btn-first">
+                          SAVE 18%
+                        </button>
+                        <div className="yearly-price">
+                          <div className="old-price">
+                            <span>$10.99</span>
+                          </div>
+                          <div className="current-price">
+                            <span className="dollar-sign">$ </span>1.39 <span>/Month</span>
+                          </div>
                         </div>
                       </div>
+                      <div>
+                        <button type="button" className="cart-btn-first">
+                          Add to cart
+                        </button>
+                      </div>
                     </div>
-                    <div>
-                      <button type="button" className="cart-btn-first">
-                        Add to cart
-                      </button>
-                    </div>
-                  </div>
+                  )}
                 </>
               )}
             </div>
@@ -60,9 +66,14 @@ export function DomainCard() {
           <Loader style={{ margin: '10rem' }} />
         ) : (
           <>
-            <h1 className="option-text">More options</h1>
+            <h1 className={`${domainAvailability === 'UNAVAILABLE' ? 'option-text hidden' : 'option-text'}`}>
+              More options
+            </h1>
             {extensions.map((el, index) => (
-              <div className="card-wrapper" key={index}>
+              <div
+                className={`${domainAvailability === 'UNAVAILABLE' ? 'card-wrapper hidden' : 'card-wrapper'}`}
+                key={index}
+              >
                 <div className="domain-card-options">
                   <div className="card-content">
                     <div className="domain-info">

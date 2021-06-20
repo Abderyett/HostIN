@@ -5,6 +5,9 @@
   display: flex;
   justify-content: center;
 }
+.card-wrapper.hidden {
+  display: none;
+}
 .domain-status {
   width: 100%;
   background: $cyan_400;
@@ -15,6 +18,10 @@
   padding: 1rem;
   font-family: "proxima_bold";
   font-size: 2rem;
+}
+.domain-status.unavailable {
+  background-color: $pink_vivid_050;
+  color: $pink_vivid_400;
 }
 
 .card-content {
@@ -117,6 +124,9 @@
   color: $blue_800;
   font-family: "proxima_bold";
   margin-bottom: 4rem;
+}
+.option-text.hidden {
+  display: none;
 }
 
 .domain-card-options {
