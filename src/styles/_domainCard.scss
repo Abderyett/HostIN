@@ -137,3 +137,18 @@
   max-width: 1080px;
   border: 1px solid $grey_300;
 }
+
+#arrow {
+  font-size: 6rem;
+  color: $grey_400;
+  cursor: pointer;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 99;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: $indigo_600;
+  }
+}
