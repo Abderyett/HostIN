@@ -62,6 +62,7 @@ export function Domain() {
           </p>
           <form>
             <input className="domain-input" type="text" value={searchTerm} onChange={handleChange} />
+
             <Link to="card" smooth>
               <button className="search-btn" type="submit" onClick={handlSubmit}>
                 Search

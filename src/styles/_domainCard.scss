@@ -5,6 +5,10 @@
   display: flex;
   justify-content: center;
 }
+
+.card-wrapper.first {
+  margin-bottom: 5rem;
+}
 .card-wrapper.hidden {
   display: none;
 }
@@ -144,7 +148,7 @@
 }
 
 .option-text {
-  margin-top: 10rem;
+  margin-top: 5rem;
   font-size: 4.8rem;
   color: $blue_800;
   font-family: "proxima_bold";
@@ -176,4 +180,8 @@
   &:hover {
     color: $indigo_600;
   }
+}
+
+.options-wrapper {
+  margin-bottom: 10rem;
 }

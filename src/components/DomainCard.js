@@ -38,7 +38,7 @@ export function DomainCard() {
     <>
       {Object.keys(domain).length !== 0 && (
         <div className="domain-card-container">
-          <div className="card-wrapper">
+          <div id="card" className="card-wrapper first">
             <div className="domain-card">
               <div
                 className={`${domainAvailability === 'UNAVAILABLE' ? 'domain-status unavailable' : 'domain-status'}`}
@@ -85,13 +85,13 @@ export function DomainCard() {
           {loading ? (
             ''
           ) : (
-            <>
+            <div className="options-wrapper">
               <h1 className={`${domainAvailability === 'UNAVAILABLE' ? 'option-text hidden' : 'option-text'}`}>
                 More options
               </h1>
+
               {extensions.map((el, index) => (
                 <div
-                  id="card"
                   className={`${domainAvailability === 'UNAVAILABLE' ? 'card-wrapper hidden' : 'card-wrapper'}`}
                   key={index}
                 >
@@ -129,7 +129,7 @@ export function DomainCard() {
                   </div>
                 </div>
               ))}
-            </>
+            </div>
           )}
         </div>
       )}

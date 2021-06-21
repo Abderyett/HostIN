@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "eslint-config-wesbos": "^1.0.1",
     "eslint-plugin-html": "^6.1.2",
+    "formik": "^2.2.9",
     "framer-motion": "^4.1.17",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
@@ -20,7 +21,8 @@
     "react-scripts": "4.0.1",
     "react-scroll": "^1.8.2",
     "uuid": "^8.3.2",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",

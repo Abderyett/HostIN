@@ -12,7 +12,7 @@ export function DomainList() {
       <img src={com} alt="com" />
       <img src={online} alt="online" />
       <img src={xyz} alt="xyz" />
-      <img className="link" src={link} alt="link" />
+      <img className="svgLink" src={link} alt="link" />
       <img className="live" src={live} alt="live" />
       <img className="digital" src={digital} alt="digital" />
     </div>
