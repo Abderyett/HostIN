@@ -34,7 +34,7 @@ export function Register() {
                 alert(JSON.stringify(values), null, 2);
                 resetForm();
                 setSubmitting(false);
-              }, 3000);
+              }, 1000);
             }}
           >
             {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
