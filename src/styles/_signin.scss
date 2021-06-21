@@ -38,8 +38,9 @@
 @mixin style-input {
   display: flex;
   flex-direction: column;
+  padding-bottom: 0.5rem;
   text-align: start;
-  padding-bottom: 2rem;
+
   width: 400px;
 
   @media (max-width: 515px) {

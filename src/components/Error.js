@@ -12,6 +12,6 @@ export function Error({ touched, message }) {
 }
 
 Error.propTypes = {
-  touched: PropTypes.bool.isRequired,
-  message: PropTypes.string.isRequired,
+  touched: PropTypes.bool,
+  message: PropTypes.string,
 };
